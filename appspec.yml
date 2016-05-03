@@ -36,7 +36,7 @@ permissions:
     group: root
     mode: 700
 hooks:
-  ApplicationStop:
+#  ApplicationStop:
 #    - location: scripts/deregister_from_elb.sh
 #      timeout: 180
 #      runas: root
