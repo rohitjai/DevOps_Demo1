@@ -16,9 +16,6 @@ permissions:
     mode: 700
 hooks:
   ApplicationStop:
-    - location: scripts/deregister_from_elb.sh
-      timeout: 300
-      runas: root
     - location: scripts/stop_server.sh
       timeout: 300
       runas: root
@@ -32,8 +29,5 @@ hooks:
       runas: root
   ValidateService:
     - location: scripts/validate_me.sh
-      timeout: 300
-      runas: root
-    - location: scripts/register_with_elb.sh
       timeout: 300
       runas: root
