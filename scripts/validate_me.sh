@@ -13,8 +13,6 @@
 # express or implied. See the License for the specific language governing
 # permissions and limitations under the License.
 
-. $(dirname $0)/common_functions.sh
-
 http_code=$(curl -Ss -LI http://localhost -o /dev/null -w "%{http_code}" 2>/dev/null)
 
 if [ $http_code -eq 200 ] ; then
